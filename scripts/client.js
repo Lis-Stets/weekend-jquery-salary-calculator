@@ -47,8 +47,13 @@ function displayInputs( inputArray ){
     }
     $('#totalMonthlyCostOutput').empty();
     $('#totalMonthlyCostOutput').append( totalMonthlyCost )
+//If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost. (js, css)
+    if( totalMonthlyCost > 20000){
+        $( '#totalMonthlyCostOutput' ).css( 'background-color', 'rgba(255, 0, 0, 0.863)');
+    }
+    else{rgb(230, 250, 231)
+        $( '#totalMonthlyCostOutput' ).css( 'background-color', 'rgb(230, 250, 231)');
+    }
 }
 
-
-//If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost. (js, css)
 // Create a delete button that removes an employee from the DOM.(Jq)
