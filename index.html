@@ -10,24 +10,55 @@
     <title>Salary Calculator</title>
 </head>
 <body>
-    <div>
-        <h1>Employee Salary Calculator</h1>
-    </div>
+    <div class="background">
+        <div class=" header ">
+            <h1>Employee Salary Calculator</h1>
+        </div>
 
-    <div id="inputDiv">
-        <input type="text" placeholder="First Name" id="firstNameInput"/>
-        <input type="text" placeholder="Last Name" id="lastNameInput"/>
-        <input type="number" placeholder="ID Number" id="idNumberInput"/>
-        <input type="text" placeholder="Job Title" id="jobTitieInput"/>
-        <input type="number" placeholder="Annual Salary" id="annualSalaryInput"/>
-        <button id="submitInputsbutton">Submit</button>
-    </div>
+        <div id="inputDiv" class="inputDiv">
+            <input type="text" placeholder="First Name" id="firstNameInput"/>
+            <input type="text" placeholder="Last Name" id="lastNameInput"/>
+            <input type="number" placeholder="ID Number" id="idNumberInput"/>
+            <input type="text" placeholder="Job Title" id="jobTitieInput"/>
+            <input type="number" placeholder="Annual Salary" id="annualSalaryInput"/>
+            <button id="submitInputsbutton">Submit</button>
+        </div>
 
-    <div id="outputDiv">
-        <ul id="employeeListOutput">
-
-        </ul>
-        <h2>Total Monthly Cost: $<span id="totalMonthlyCostOutput"></span></h2>
-    </div>
+        <div id="outputDiv">
+            <table>
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Employee ID</th>
+                    <th>Job Title</th>
+                    <th>Annual Salary</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableOutputs">
+                <tr>
+                    <!-- outputs appended from javaScript -->
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </tfoot>
+            </table>
+            <h2>Total Monthly Cost: $<span id="totalMonthlyCostOutput"></span></h2>
+        </div>
+    </div>    
 </body> 
 </html>

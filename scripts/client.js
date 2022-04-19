@@ -3,7 +3,7 @@ $( document ).ready( onReady );
 function onReady(){
     $( console.log( "Ready." ) );
     $( '#submitInputsbutton' ).on( 'click', newEmployee );
-    $( '#employeeListOutput' ).on( 'click', '.removeEmployeeButton', removeEmployee )
+    $( '#employeeTableOutputs' ).on( 'click', '.removeEmployeeButton', removeEmployee )
 }//end onReady
 
 let employees = [];
@@ -36,15 +36,27 @@ console.log( employees );
 //append this to the to DOM. (html, jq)
 function displayInputs( inputArray ){
     console.log( 'in displayInputs' );
-    let unorderedListItemToBeDisplayed = $( '#employeeListOutput' );
-    unorderedListItemToBeDisplayed.empty();
+    let tableBody = $( '#employeeTableOutputs' );
+    tableBody.empty();
     let totalMonthlyCost = 0;
 
-    for( let i=0;i<inputArray.length; i++ ){
-        unorderedListItemToBeDisplayed.append(`<li>${inputArray[i].firstName} ${inputArray[i].lastName}: ${inputArray[i].idNumber}, ${inputArray[i].jobTitie}, $${inputArray[i].annualSalary}  <button id="removeEmployeeButton" class="removeEmployeeButton" data-index= "${i}">Remove Employee</button> </li>`);
+     for( let i=0;i<inputArray.length; i++ ){
+        tableBody.append(`
+        <tr>
+                <td>${inputArray[i].firstName}</td>
+                <td>${inputArray[i].lastName}</td>
+                <td>${inputArray[i].idNumber}</td>
+                <td>${inputArray[i].jobTitie}</td>
+                <td>$${inputArray[i].annualSalary}</td>
+                <td><button class="removeEmployeeButton" data-index= "${i}">Remove Employee</button></td>
+        </tr>
+        `);
         totalMonthlyCost += Number( inputArray[i].annualSalary ).toFixed( 2 )/12;
         console.log( totalMonthlyCost );
-    }
+     }//end append for loop
+
+    //    unorderedListItemToBeDisplayed.append(`<li>${inputArray[i].firstName} ${inputArray[i].lastName}: ${inputArray[i].idNumber}, ${inputArray[i].jobTitie}, $${inputArray[i].annualSalary} 
+    // <button id="removeEmployeeButton" class="removeEmployeeButton" data-index= "${i}">Remove Employee</button> </li>`);
     $('#totalMonthlyCostOutput').empty();
     $('#totalMonthlyCostOutput').append( totalMonthlyCost )
 //If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost. (js, css)
@@ -62,4 +74,4 @@ function removeEmployee(){
     console.log( $( this ).data( 'index' ) );
     employees.splice( $( this ).data( 'index' ), 1 );
     displayInputs( employees );
-}
+}//end removeEmployee

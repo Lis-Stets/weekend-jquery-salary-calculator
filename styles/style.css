@@ -1,9 +1,41 @@
 body{
 font-family: serif;
-background-color: rgb(230, 250, 231);
+background-color: rgb(255, 247, 193);
+}
+.background{
+    border: black double 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #96D4D4
+    
+
+}
+.header{
+    border: black double 15px;
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    text-align: center;
+    background-color: rgb(255, 252, 234);
+}
+.inputDiv{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: black double 3px;
+}
+table{
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    border-collapse: collapse;
+    background-color: rgb(255, 252, 234);
 }
 
-/* h2{
-    background-color: rgba(255, 0, 0, 0.749);
-    color: rgb(0, 0, 0);
-} */
+th{
+    border: 3px solid black;
+}
+td{
+    border: 3px solid black;
+}
