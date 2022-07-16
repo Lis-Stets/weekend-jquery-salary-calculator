@@ -1,5 +1,4 @@
 # Salary Calculator
-# SQL To-Do List
 
 ## Description
 
