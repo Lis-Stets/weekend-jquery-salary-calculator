@@ -1,9 +1,18 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Salary Calculator
+# SQL To-Do List
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration: 1 Week_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This project is a simple client side calculator. The user can input empolyee information and the page will display alll the submitted employees in a table. It will also display the total monthly cost to the employer to pay all the employees.
+
+## Built With
+
+- HTML
+- CSS
+- JavaScript
+- jQuery
+
+## Acknowledgement
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped me with the knowledge to make this project.
